@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitagorasz tétele</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+
+    <h1 class="amatic-sc-regular">Pitagorasz tétele</h1>
+
+    <div>
+        <div style="float: left;"><img src="Pitagorasz tétel_sm.webp" alt=""></div>
+        <div>
+
+
+            <form id="pitagoras-form">
+                <fieldset>
+                    <legend>C számolása</legend>
+                    
+                
+                    <label for="a">a oldal:</label>
+                    <input type="number" id="a" name="a" required><br><br>
+                    <label for="b">b oldal:</label>
+                    <input type="number" id="b" name="b" required><br><br>
+                    <label for="c">c oldal:</label>
+                    <input type="text" id="c" name="c" readonly><br><br>
+                    <button type="button" onclick="calculate()">Megoldás</button>
+                    <button type="reset">Reset</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function calculate() {
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            var c = Math.sqrt(a * a + b * b);
+            document.getElementById('c').value = c.toFixed(2);
+        }
+    </script>
+    
+</body>
+</html>
